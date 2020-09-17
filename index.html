@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <title>WhiteBoard</title>
+  </head>
+  <body>
+    <h1 class="title">WhiteBoard</h1>
+    <div class="drawing-board" data-cursor="">
+      <div class="tool-select">
+        <ul>
+          <li class="tool" data-type="pencil">
+            <img src="./public/pencil.svg" />
+            <div class="tool-expand">
+              <ul>
+                <li
+                  data-dimension="thin"
+                  onclick="selectTool({type:'pencil', dimension:'thin'})"
+                >
+                  <i></i>
+                </li>
+                <li
+                  data-dimension="medium"
+                  onclick="selectTool({type:'pencil', dimension:'medium'})"
+                >
+                  <i></i>
+                </li>
+                <li
+                  data-dimension="bold"
+                  onclick="selectTool({type:'pencil', dimension:'bold'})"
+                >
+                  <i></i>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li
+            class="tool"
+            data-type="highlight"
+            onclick="selectTool({type:'highlight'})"
+          >
+            <img src="./public/highlight.svg" />
+          </li>
+          <li
+            class="tool"
+            data-type="eraser"
+            onclick="selectTool({type:'eraser'})"
+          >
+            <img src="./public/eraser.svg" />
+          </li>
+          <li class="tool color">
+            <i></i>
+            <div class="tool-expand">
+              <ul>
+                <li data-color="666" onclick="selectColor('#666')">
+                  <i></i>
+                </li>
+                <li data-color="F00" onclick="selectColor('#F00')">
+                  <i></i>
+                </li>
+                <li data-color="fff3c3" onclick="selectColor('#fff3c3')">
+                  <i></i>
+                </li>
+                <li data-color="00F" onclick="selectColor('#00F')">
+                  <i></i>
+                </li>
+                <li data-color="0FF" onclick="selectColor('#0FF')">
+                  <i></i>
+                </li>
+                <li data-color="F0F" onclick="selectColor('#F0F')">
+                  <i></i>
+                </li>
+                <li data-color="0F0" onclick="selectColor('#0F0')">
+                  <i></i>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <canvas id="canvas"></canvas>
+    </div>
+    <script src="./index.js"></script>
+    <script src="./canvas.js"></script>
+  </body>
+</html>
