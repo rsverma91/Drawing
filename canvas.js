@@ -48,7 +48,7 @@ function initToolConfig() {
     canvasCtx.globalCompositeOperation = "source-over";
     canvasCtx.strokeStyle = selectedColor.pencil;
   } else if (toolType === "highlight") {
-    canvasCtx.globalCompositeOperation = "destination-over";
+    canvasCtx.globalCompositeOperation = "hue";
     canvasCtx.strokeStyle = selectedColor.highlight;
   } else if (toolType === "eraser") {
     canvasCtx.globalCompositeOperation = "destination-out";
